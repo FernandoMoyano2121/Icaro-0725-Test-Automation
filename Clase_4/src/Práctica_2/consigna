@@ -1,0 +1,11 @@
+Utilizando la clase Estudiante creada en la Práctica 1:
+
+Crear un método main en una clase separada
+Instanciar un objeto de tipo Estudiante usando el constructor completo
+Mostrar por consola todos los atributos del estudiante usando los getters
+
+Datos sugeridos:
+
+ID: 1001
+Nombre Completo: "María González"
+Promedio: 8.5f

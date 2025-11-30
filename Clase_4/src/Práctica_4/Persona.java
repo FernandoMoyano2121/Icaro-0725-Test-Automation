@@ -1,3 +1,5 @@
+package Práctica_4;
+
 public class Persona {
     private String nombre;
     private String apellido;
@@ -5,6 +7,11 @@ public class Persona {
     public Persona(String nombre, String apellido){
         this.nombre=nombre;
         this.apellido=apellido;
+    }
+
+    //Metodo que será sobreescrito por las clases hijas
+    public void saludar(){
+        System.out.println("Hola, ¿Cómo están? ");
     }
 
     public String getNombre(){

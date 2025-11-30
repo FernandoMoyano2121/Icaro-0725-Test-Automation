@@ -1,3 +1,5 @@
+package Practica_1;
+
 public class Estudiante {
     private Integer id;
     private String nombreCompleto;
@@ -35,3 +37,4 @@ public class Estudiante {
         this.promedio=promedio;
     }
 }
+

@@ -1,0 +1,50 @@
+-------------------------------------------------
+Práctica 4
+--------------------------------------------------
+
+1. Crear una clase padre llamada Persona con:
+
+Atributos privados: nombre (String), apellido (String)
+Constructor completo y constructor vacío
+Getters y setters
+
+
+2. Crear tres clases hijas que hereden de Persona:
+
+Alumno: agregar atributos matricula (String), nota (Integer), materias (ArrayList<String>)
+Profesor: agregar atributo alumnos (ArrayList<Alumno>)
+NoDocente: agregar atributo area (String) [ejemplo: "Administración", "Mantenimiento"]
+
+
+3. Cada clase debe tener sus constructores, getters y setters correspondientes
+
+--------------------------------------------------
+Práctica 5
+--------------------------------------------------
+
+
+Continuando con las clases de la Práctica 4:
+
+Parte 1: Sobrescritura (@Override)
+
+    En la clase Persona, crear un método saludar() que imprima: "Hola, ¿cómo están?"
+    Sobrescribir el método saludar() en cada clase hija:
+
+    Alumno: "¡Qué onda!"
+    Profesor: "Hola a todos, bienvenidos"
+    NoDocente: "Buen día"
+
+Parte 2: Sobrecarga (Overload)
+
+    3. En la clase Profesor, crear dos versiones del método calificar():
+
+    calificar(Alumno alumno, Integer nota): asigna la nota a ese alumno específico
+
+    calificar(Integer nota): asigna la misma nota a todos sus alumnos.
+
+
+Parte 3: Demostración de Polimorfismo
+
+    4. Crear una lista de tipo Persona que contenga objetos Alumno, Profesor y NoDocente
+    5. Recorrer la lista usando un bucle for-each y llamar al método saludar() de cada uno
+

@@ -1,0 +1,18 @@
+Crear una clase llamada Estudiante que contenga:
+
+Atributos privados:
+
+id (Integer)
+nombreCompleto (String)
+promedio (Float)
+
+
+Constructores:
+
+Constructor vacío
+Constructor completo que inicialice todos los atributos
+
+
+Métodos:
+
+Getters y setters para cada atributo

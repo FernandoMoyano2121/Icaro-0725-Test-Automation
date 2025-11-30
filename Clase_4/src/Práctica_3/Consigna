@@ -1,0 +1,11 @@
+Utilizando la clase Estudiante de la Práctica 1:
+
+Intentar acceder directamente al atributo id desde la clase Main
+Cambiar temporalmente el modificador de acceso de getId() de public a private
+Observar y describir qué sucede en cada caso
+
+Preguntas guía:
+
+¿Qué error se produce al intentar acceder a estudiante1.id directamente?
+¿Qué error se produce cuando getId() es privado?
+¿Por qué es importante usar getters y setters en lugar de acceder directamente a los atributos?

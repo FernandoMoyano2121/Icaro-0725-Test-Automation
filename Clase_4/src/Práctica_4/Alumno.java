@@ -1,3 +1,5 @@
+package Práctica_4;
+
 import java.util.ArrayList;
 
 public class Alumno extends Persona {
@@ -11,6 +13,11 @@ public class Alumno extends Persona {
         this.matricula = matricula;
         this.nota = 0;
         this.materias = new ArrayList<>();
+    }
+
+    @Override
+    public void saludar(){
+        System.out.println("Hola como andás?");
     }
 
     public String getMatricula(){
@@ -39,5 +46,16 @@ public class Alumno extends Persona {
 
     public void agregarMateria(String materia){
         this.materias.add(materia);
+    }
+
+//    @Override
+//    public String toString(){
+//        return getNombre() + " " + getApellido() + "Notas: " + nota;
+//    }
+
+
+    @Override
+    public String toString(){
+        return getNombre() + " " + getApellido() + "Notas: " + nota;
     }
 }

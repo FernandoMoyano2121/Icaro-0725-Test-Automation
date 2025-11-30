@@ -1,0 +1,17 @@
+Ejercicio:
+
+Crear una clase padre llamada Persona con:
+
+Atributos privados: nombre (String), apellido (String)
+Constructor completo y constructor vacío
+Getters y setters
+
+
+Crear tres clases hijas que hereden de Persona:
+
+Alumno: agregar atributos matricula (String), nota (Integer), materias (ArrayList<String>)
+Profesor: agregar atributo alumnos (ArrayList<Alumno>)
+NoDocente: agregar atributo area (String) [ejemplo: "Administración", "Mantenimiento"]
+
+
+Cada clase debe tener sus constructores, getters y setters correspondientes

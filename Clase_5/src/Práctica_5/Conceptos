@@ -1,0 +1,70 @@
+⭐ Polimorfismo
+
+El polimorfismo es un concepto fundamental de la programación
+orientada a objetos que significa “muchas formas”.
+
+En Java se refiere a la capacidad que tienen los objetos
+de diferentes clases de responder de manera distinta a un
+mismo mensaje o llamada de método, siempre que compartan
+una relación de herencia.
+
+El polimorfismo permite que un mismo método pueda producir
+comportamientos diferentes según qué tipo de objeto lo esté
+utilizando.
+
+Esto favorece la flexibilidad, la extensibilidad del código
+y la posibilidad de trabajar con tipos más genéricos
+(como una clase padre) mientras se ejecutan comportamientos
+específicos de las clases hijas.
+
+____________________________________________________________
+
+⭐ Sobreescritura (Override)
+
+La sobreescritura ocurre cuando una clase hija redefine un
+método que ya existía en la clase padre.
+El método conserva el mismo nombre, mismo tipo de retorno
+y misma lista de parámetros, pero la clase hija proporciona
+una implementación diferente o más específica.
+
+La sobreescritura es uno de los mecanismos que permite el
+polimorfismo:
+según el tipo real del objeto (alumno, profesor, empleado…),
+el método sobrescrito responderá de manera particular.
+
+Se utiliza para personalizar o especializar comportamientos
+heredados.
+
+⭐ Sobrecarga (Overload)
+
+La sobrecarga es un mecanismo que permite definir varios
+métodos con el mismo nombre dentro de una misma clase,
+siempre que tengan distintas listas de parámetros (en cantidad
+o tipos).A diferencia de la sobreescritura, no tiene relación con
+herencia, sino con ofrecer varias versiones de un mismo método.
+
+La sobrecarga permite al programador simplificar el uso de
+un método ofreciendo diferentes formas de llamarlo, según
+las necesidades del contexto.
+
+___________________________________________________________________
+
+⭐ Abstracción
+
+La abstracción es el principio por el cual se ocultan los
+detalles internos de cómo funcionan las cosas y se muestra
+únicamente aquello que es esencial para usar un objeto.
+
+En Java, se logra principalmente mediante:
+
+Clases abstractas, que no se pueden instanciar directamente y
+sirven como modelos o conceptos generales.
+
+Métodos abstractos, que declaran qué debe hacerse, pero
+dejan en manos de las clases hijas la responsabilidad de
+definir cómo hacerlo.
+
+La abstracción permite centrarse en qué hace un objeto,
+sin necesidad de conocer cómo lo hace internamente.
+Facilita el diseño de sistemas más simples, modulares y
+fáciles de mantener.
