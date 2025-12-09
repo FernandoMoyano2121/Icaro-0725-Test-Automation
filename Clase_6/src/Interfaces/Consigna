@@ -1,0 +1,113 @@
+Práctica 8 - Interfaces en Java
+
+Objetivo:
+Que el alumno comprenda qué son las interfaces en Java, cómo
+se definen, cómo se implementan y cuál es su utilidad para
+establecer "contratos" que las clases deben cumplir.
+
+Contexto:
+Imagina que estás diseñando un sistema para una smart home
+(casa inteligente). Tienes diferentes dispositivos: luces,
+ventiladores, televisores, etc. Todos estos dispositivos
+comparten algo en común: se pueden encender y apagar.
+Sin embargo, cada dispositivo lo hace de manera diferente:
+
+Una luz se enciende iluminando
+Un ventilador se enciende girando sus aspas
+Un televisor se enciende mostrando la pantalla
+
+Una interfaz nos permite definir ese "contrato" común
+(encender/apagar) sin importar cómo cada dispositivo
+lo implemente internamente.
+
+---------------------------------------------------
+
+Ejercicio:
+Crear un sistema simple de dispositivos inteligentes usando interfaces.
+
+Parte 1: Crear la interfaz Encendible
+
+Debe tener dos métodos sin implementación (abstractos):
+
+void encender()
+void apagar()
+
+-----------------------------------------------------
+
+Parte 2: Crear la clase Luz
+
+Debe implementar la interfaz Encendible
+Atributos:
+
+- ubicacion (String) - Ejemplo: "Sala", "Cocina"
+- encendida (boolean)
+
+
+Constructor que reciba la ubicación e inicialice encendida en false
+Implementar los métodos:
+
+encender(): cambia encendida a true e imprime
+ "💡 Luz de [ubicacion] encendida - Iluminando..."
+apagar(): cambia encendida a false e imprime
+ "💡 Luz de [ubicacion] apagada"
+
+------------------------------------------------
+
+Parte 3: Crear la clase Ventilador
+
+Debe implementar la interfaz Encendible
+Atributos:
+
+ubicacion (String)
+encendido (boolean)
+
+
+Constructor que reciba la ubicación e inicialice encendido en false
+Implementar los métodos:
+
+encender(): cambia encendido a true e imprime
+    "🌀Ventilador de [ubicacion] encendido - Girando aspas..."
+apagar(): cambia encendido a false e imprime
+    "🌀 Ventilador de [ubicacion] apagado"
+
+----------------------------------------------
+
+Parte 4: Crear la clase Televisor
+
+Debe implementar la interfaz Encendible
+Atributos:
+
+marca (String)
+encendido (boolean)
+
+
+Constructor que reciba la marca e inicialice encendido en false
+Implementar los métodos:
+
+encender(): cambia encendido a true e imprime
+    "📺 Televisor [marca] encendido - Mostrando imagen..."
+apagar(): cambia encendido a false e imprime
+    "📺 Televisor [marca] apagado"
+
+--------------------------------------------
+
+Parte 5: Crear la clase Main
+
+Crear objetos de cada tipo de dispositivo
+Crear un array o lista de tipo Encendible que contenga todos los dispositivos
+Recorrer el array y encender todos los dispositivos
+Imprimir una línea en blanco
+Recorrer el array nuevamente y apagar todos los dispositivos
+
+---------------------------------------------
+
+Salida esperada:
+===== ENCENDIENDO TODOS LOS DISPOSITIVOS =====
+💡 Luz de Sala encendida - Iluminando...
+🌀 Ventilador de Dormitorio encendido - Girando aspas...
+📺 Televisor Samsung encendido - Mostrando imagen...
+
+===== APAGANDO TODOS LOS DISPOSITIVOS =====
+💡 Luz de Sala apagada
+🌀 Ventilador de Dormitorio apagado
+📺 Televisor Samsung apagado

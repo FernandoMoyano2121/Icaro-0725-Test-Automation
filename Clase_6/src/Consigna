@@ -1,0 +1,92 @@
+Práctica 7 - Abstracción y Clases Abstractas
+
+
+EJERCICIO:
+Crear un sistema de procesamiento de pagos que demuestre el
+principio de abstracción. El sistema debe enfocarse solo
+en lo esencial para procesar diferentes tipos de pagos,
+ignorando detalles irrelevantes.
+
+CONTEXTO:
+En un sistema de pagos en línea, lo importante es procesar el
+pago independientemente del método utilizado. NO necesitamos
+saber el color de la tarjeta, el material del plástico o el
+peso de la misma. Solo nos enfocamos en lo esencial: el monto,
+la fecha y cómo procesar el pago.
+
+-----------------------------------------------------------
+Parte 1: Crear la clase abstracta Pago
+
+Debe ser una clase abstracta (usar palabra clave abstract)
+Atributos protegidos:
+
+monto (double)
+fecha (String)
+
+- Constructor que inicialice los atributos
+- Método abstracto procesarPago() que retorne boolean
+- Getters para monto y fecha
+
+------------------------------------------------------------
+
+Parte 2: Crear la clase PagoTarjeta
+
+- Debe heredar de Pago
+- Atributos privados adicionales:
+
+- numeroTarjeta (String)
+- cvv (String)
+
+
+Constructor que reciba: monto, fecha, numeroTarjeta y cvv
+Implementar el método procesarPago() que:
+
+Imprima "Procesando pago con tarjeta..."
+Imprima "Monto: $" seguido del monto
+Retorne true
+
+-----------------------------------------------------------
+
+Parte 3: Crear la clase PagoTransferencia
+
+- Debe heredar de Pago
+- Atributo privado adicional:
+
+cuentaBancaria (String)
+
+
+Constructor que reciba: monto, fecha y cuentaBancaria
+Implementar el método procesarPago() que:
+
+Imprima "Procesando transferencia bancaria..."
+Imprima "Monto: $" seguido del monto
+Retorne true
+
+----------------------------------------------------------------
+
+Parte 4: Crear la clase Main
+
+Crear un objeto de tipo PagoTarjeta con:
+
+Monto: 150.50
+Fecha: "2024-11-28"
+Número de tarjeta: "1234-5678-9012"
+CVV: "123"
+
+
+Crear un objeto de tipo PagoTransferencia con:
+
+Monto: 300.00
+Fecha: "2024-11-28"
+Cuenta bancaria: "0001234567890"
+
+
+Procesar ambos pagos llamando al método procesarPago()
+Nota importante: Declara las variables como tipo Pago para demostrar polimorfismo
+
+Salida esperada:
+Procesando pago con tarjeta...
+Monto: $150.5
+
+Procesando transferencia bancaria...
+Monto: $300.0
