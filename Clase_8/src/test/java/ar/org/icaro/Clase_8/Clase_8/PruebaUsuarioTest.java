@@ -66,4 +66,50 @@ public class PruebaUsuarioTest {
         Assert.assertFalse(usuarioStandard.estaLogueado(),
                 "Después de logout, el usuario no debería estar logueado");
     }
+
+    // =========================================================
+    //                     TESTS DE VALIDACION
+    // =========================================================
+
+        /**
+     * Test: Usuario con credenciales válidas
+     */
+    @Test
+    public void usuarioConCredencialesValidas() {
+        Assert.assertTrue(usuarioStandard.esValido(), 
+            "Usuario con username y password >= 4 caracteres debería ser válido");
+    }
+
+    /**
+     * Test: Usuario con username vacío no es válido
+     */
+    @Test
+    public void usuarioConUsernameVacioNoEsValido() {
+        Assert.assertFalse(usuarioInvalido.esValido(), 
+            "Usuario con username vacío no debería ser válido");
+    }
+
+    /**
+     * Test: Usuario con password corto no es válido
+     */
+    @Test
+    public void usuarioConPasswordCortoNoEsValido() {
+        Usuario usuarioPasswordCorto = new Usuario("usuario", "123");
+        Assert.assertFalse(usuarioPasswordCorto.esValido(), 
+            "Usuario con password < 4 caracteres no debería ser válido");
+    }
+
+    // =========================================================
+    //                     TEST DE GETTER
+    // =========================================================
+
+    /**
+     * Test: Verificar que getUsername funciona correctamente
+     */
+    @Test
+    public void verificarGetUsername() {
+        Assert.assertEquals(usuarioStandard.getUsername(), "standard_user",
+            "getUsername debería retornar el username correcto");
+    }
+
 }
