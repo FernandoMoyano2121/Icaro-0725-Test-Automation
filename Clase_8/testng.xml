@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="ICARO automatización de tests">
+    <test name="Prueba Matematica">
+        <classes>
+            <class name="ar.org.icaro.Clase_8.Clase_8.PruebaSumaTest">
+                <methods>
+                    <include name="validarSumarCero"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Prueba de Sesion de Usuario">
+        <classes>
+            <class name="ar.org.icaro.Clase_8.Clase_8.PruebaUsuarioTest"></class>
+        </classes>
+    </test>
+</suite>
