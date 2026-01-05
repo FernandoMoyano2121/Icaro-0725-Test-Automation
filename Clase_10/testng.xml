@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Clase 10 - Page Object Model">
+
+    <!-- Test 1: Sin Page Object  -  -->
+    <test name="Tests Sin Page Object">
+        <classes>
+            <class name="ar.org.icaro.automation.LoginSinPageObjectTest"/>
+        </classes>
+    </test>
+
+    <!-- Test 2: Con Page Object  -  -->
+    <test name="Tests con Page Object">
+        <classes>
+            <class name="ar.org.icaro.automation.LoginConPageObjectTest"/>
+        </classes>
+    </test>
+
+</suite>
