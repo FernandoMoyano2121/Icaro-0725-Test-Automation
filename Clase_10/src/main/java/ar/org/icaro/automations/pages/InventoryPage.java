@@ -25,6 +25,7 @@ public class InventoryPage {
     // ATRIBUTOS
     // ============================================================
 
+    @SuppressWarnings("unused")
     private WebDriver driver;
     private WebDriverWait wait;
 

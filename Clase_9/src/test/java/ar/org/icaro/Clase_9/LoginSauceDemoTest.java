@@ -71,6 +71,44 @@ public class LoginSauceDemoTest {
         System.out.println("Usuario bloqueado - Mensaje " + mensajeError);
     }
 
+    @Test
+    public void loginCredencialesInvalidas(){
+        driver.findElement(By.id("user-name")).sendKeys("usuario_falso");
+        driver.findElement(By.id("password")).sendKeys(PASSWORD_INCORRECTO);
+        driver.findElement(By.id("login-button")).click();
+
+        //Verificamos que aparece el mensaje de error
+        WebElement contenedorError=driver.findElement(By.className("error-message-container"));
+        Assert.assertTrue(contenedorError.isDisplayed(), "Deberia mostrarse un mensaje de error");
+
+        //Verificamos que seguimos en la pagina de login (no navegó)
+        String urlActual=driver.getCurrentUrl();
+        Assert.assertFalse(urlActual.contains("inventory"), "No deberia haber navegado al inventario");
+
+        System.out.println("✓ Credenciales Invalidas: Error mostrado Correctamente");
+    }
+
+    @Test
+    public void verificarElementosLogin(){
+        //Verificamos que el campo de usuario existe y está visible
+        WebElement campoUsuario=driver.findElement(By.id("user-name"));
+        Assert.assertTrue(campoUsuario.isDisplayed(), "Campo usuario deberia ser visible");
+
+        //Verificamos que el campo password existe y esta visible
+        WebElement campoPassword=driver.findElement(By.id("password"));
+        Assert.assertTrue(campoPassword.isDisplayed(), "Campo password deberia ser visible");
+
+        //Verificamos que el botón de login existe y está visible
+        WebElement botonLogin=driver.findElement(By.id("login-button"));
+        Assert.assertTrue(botonLogin.isDisplayed(), "Botón login deberia ser visible");
+
+         //Verificamos que el botón de login existe y está visible
+        String textoBoton=botonLogin.getDomAttribute("value");
+        Assert.assertEquals(textoBoton, "Login", "El boton deberia decir 'Login'");
+
+        System.out.println("✓ Todos los elementos del formulario están presentes");
+    }
+
     @AfterClass
     public void tearDown() {
         if (driver != null) {

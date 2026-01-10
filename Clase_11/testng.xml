@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Clase 10.2 - POM Avanzado">
+
+    <!-- Tests E2E - Flujos completos -->
+    <test name="Tests de Flujo Completo E2E">
+        <classes>
+            <class name="com.fernandomoyano.Clase_11.FlujoCompletoTest"/>
+        </classes>
+    </test>
+
+</suite>
